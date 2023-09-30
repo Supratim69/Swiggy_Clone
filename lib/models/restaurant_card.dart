@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:swiggy_clone/Screens/Menu.dart';
 
 // class Res_Card extends StatelessWidget {
 //   const Res_Card(this.res_name, this.res_reviews, {super.key});
@@ -86,7 +87,9 @@ Widget Res_Card(BuildContext context, DocumentSnapshot document) {
         borderRadius: BorderRadius.zero,
       ),
     ),
-    onPressed: () {},
+    onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Menu()));
+    },
     // style: TextButton.styleFrom(padding: EdgeInsets.zero),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,

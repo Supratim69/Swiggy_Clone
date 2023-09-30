@@ -51,6 +51,20 @@ class _HomeState extends State<Home> {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search for restaurants',
+                  prefixIcon: Icon(Icons.search),
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+              ),
+            ),
             Expanded(
               child: StreamBuilder(
                 stream: firestore.collection('Restaurants').snapshots(),
@@ -59,7 +73,7 @@ class _HomeState extends State<Home> {
                     return const Text("Loading...");
                   }
                   return ListView.builder(
-                    itemExtent: 80.0,
+                    itemExtent: 120,
                     itemCount: snapshot.data!.docs.length,
                     itemBuilder: (context, index) {
                       return Res_Card(context, snapshot.data!.docs[index]);
