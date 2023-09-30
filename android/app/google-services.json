@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "233094921856",
+    "project_id": "swiggy-clone-1c45d",
+    "storage_bucket": "swiggy-clone-1c45d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233094921856:android:2899fdd6cda89a957d7065",
+        "android_client_info": {
+          "package_name": "com.example.swiggy_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233094921856-qknbce2adjm1s66i7u3b18hvdsecu1bj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.swiggy_clone",
+            "certificate_hash": "2b349369442c1b4ea5a39dfcee6f8a842b2b8878"
+          }
+        },
+        {
+          "client_id": "233094921856-tvd5up3qc3cn2o44serjv9h2fhkvg2i4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbUx19ysgzWG_nITl5TbnXncILkad8pCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233094921856-tvd5up3qc3cn2o44serjv9h2fhkvg2i4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
