@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-Widget Menu_Card(BuildContext context, DocumentSnapshot document) {
+Widget Menu_Card(BuildContext context, QuerySnapshot menuSnapshot) {
+  DocumentSnapshot document = menuSnapshot.docs[0];
+
   return ListView.builder(
     itemCount: 3,
     itemBuilder: (context, index) {

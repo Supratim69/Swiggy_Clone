@@ -37,14 +37,11 @@ class _MenuState extends State<Menu> {
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
-                      return const Text("Loading...");
+                      return const Center(child: Text("Loading..."));
                     }
-                    return ListView.builder(
-                      itemExtent: 500.0,
-                      itemCount: snapshot.data!.docs.length,
-                      itemBuilder: (context, index) {
-                        return Menu_Card(context, snapshot.data!.docs[index]);
-                      },
+                    return Menu_Card(
+                      context,
+                      snapshot.data as QuerySnapshot<Object?>,
                     );
                   }),
             ),
