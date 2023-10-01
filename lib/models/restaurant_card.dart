@@ -88,9 +88,9 @@ Widget Res_Card(BuildContext context, DocumentSnapshot document) {
       ),
     ),
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Menu()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => Menu(document['id'])));
     },
-    // style: TextButton.styleFrom(padding: EdgeInsets.zero),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

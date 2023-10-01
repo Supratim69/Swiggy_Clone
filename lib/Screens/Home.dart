@@ -76,7 +76,10 @@ class _HomeState extends State<Home> {
                     itemExtent: 120,
                     itemCount: snapshot.data!.docs.length,
                     itemBuilder: (context, index) {
-                      return Res_Card(context, snapshot.data!.docs[index]);
+                      return Res_Card(
+                        context,
+                        snapshot.data!.docs[index],
+                      );
                     },
                   );
                 },

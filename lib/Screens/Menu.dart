@@ -4,7 +4,8 @@ import 'package:swiggy_clone/Screens/MainScreen.dart';
 import 'package:swiggy_clone/models/menu_card.dart';
 
 class Menu extends StatefulWidget {
-  const Menu({super.key});
+  const Menu(this.document_id, {super.key});
+  final String document_id;
 
   @override
   State<Menu> createState() => _MenuState();
@@ -32,16 +33,20 @@ class _MenuState extends State<Menu> {
               child: StreamBuilder(
                   stream: firestore
                       .collection('Restaurants')
-                      .doc('behrouz biriyani')
+                      .doc(widget.document_id)
                       .collection('menu')
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
                       return const Center(child: Text("Loading..."));
                     }
-                    return Menu_Card(
-                      context,
-                      snapshot.data as QuerySnapshot<Object?>,
+
+                    return ListView.builder(
+                      itemExtent: 100,
+                      itemCount: snapshot.data!.docs.length,
+                      itemBuilder: (context, index) {
+                        return Menu_Card(context, snapshot.data!.docs[index]);
+                      },
                     );
                   }),
             ),

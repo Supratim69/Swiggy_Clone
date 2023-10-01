@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:swiggy_clone/Screens/MainScreen.dart';
+import 'package:swiggy_clone/Screens/LoginPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MainScreen(),
+      home: const LoginPage(),
     );
   }
 }
