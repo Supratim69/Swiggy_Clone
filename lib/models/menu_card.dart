@@ -6,7 +6,7 @@ Widget Menu_Card(BuildContext context, DocumentSnapshot document) {
     elevation: 3,
     margin: EdgeInsets.all(8),
     child: Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(7.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -21,7 +21,7 @@ Widget Menu_Card(BuildContext context, DocumentSnapshot document) {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(6),
             child: Text(
               "₹" + document['Price'],
               style: const TextStyle(
@@ -32,7 +32,9 @@ Widget Menu_Card(BuildContext context, DocumentSnapshot document) {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: const Text('Add to Cart'),
+            child: Container(
+                constraints: BoxConstraints(maxWidth: 80),
+                child: const Text('Add to Cart')),
           ),
         ],
       ),
